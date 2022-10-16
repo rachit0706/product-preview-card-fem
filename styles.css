@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces&display=swap');
+
+
+:root {
+    /* Primary */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 15px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    min-height: 100vh;
+    background-color: var(--cream);
+    flex-wrap: wrap;
+}
+
+.container {
+    margin: 1rem 1.5rem;
+    border-radius: 10px;
+    max-width: 500px;
+    height: auto;
+    overflow: hidden;
+    box-shadow: var(--dark-grayish-blue) 0px 5px 14px;
+}
+
+.perfume-details, .perfume-image {
+    flex: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .perfume-details, .perfume-image {
+        flex: 100%;
+    }
+    
+    .perfume-image {
+        background-image: url('./images/image-product-mobile.jpg');
+        background-size: cover;
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    
+    .perfume-image {
+        background-image: url('./images/image-product-desktop.jpg');
+        background-size: cover;
+        /* height: 250px; */
+    }
+}
+
+
+.perfume-details {
+    background-color: var(--white);
+    align-items: flex-start;
+    padding: 1.2rem;
+    gap: 1rem;
+}
+
+.cart-btn {
+    width: 100%;
+    border: 1px solid var(--dark-cyan);
+    background-color: var(--dark-cyan);
+    padding: 0.5rem;
+    color: var(--white);
+    border-radius: 5px;
+}
+
+.cart-btn::before {
+    content: url('./images/icon-cart.svg');
+    margin-right: 7px;
+}
+
+.bold {
+    font-family: 'Fraunces';
+    font-weight: 700;
+}
+
+.price {
+    color: var(--dark-cyan);
+}
+
+.original-price {
+    color: var(--dark-grayish-blue);
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: line-through;
+    align-self: center;
+    margin-left: 1.5rem;
+}
+
+.attribution {
+    font-size: 16px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
