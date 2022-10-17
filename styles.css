@@ -23,6 +23,7 @@
 body {
     min-height: 100vh;
     font-size: 15px;
+    background-color: var(--cream);
 }
 
 .flex {
@@ -40,14 +41,14 @@ body {
 
 main {
     min-height: 100vh;
-    background-color: var(--cream);
     flex-wrap: wrap;
 }
 
 .container {
-    margin: 1rem 1.5rem;
+    margin: 1rem 2rem;
     border-radius: 10px;
-    max-width: 500px;
+    max-width: 600px;
+    /* width: 40%; */
     height: auto;
     overflow: hidden;
     box-shadow: var(--dark-grayish-blue) 0px 5px 14px;
@@ -57,33 +58,33 @@ main {
     flex: 50%;
 }
 
+.perfume-image {
+    width: 250px;
+    /* width: 100%; */
+    height: auto;
+    object-fit: cover;
+}
+
+.perfume-image > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
 @media screen and (max-width: 768px) {
     
     .perfume-details, .perfume-image {
         flex: 100%;
     }
     
-    .perfume-image {
-        background-image: url('./images/image-product-mobile.jpg');
-        background-size: cover;
-        height: 250px;
-    }
 }
-
-@media screen and (min-width: 768px) {
-    
-    .perfume-image {
-        background-image: url('./images/image-product-desktop.jpg');
-        background-size: cover;
-        /* height: 250px; */
-    }
-}
-
 
 .perfume-details {
     background-color: var(--white);
     align-items: flex-start;
     padding: 1.2rem;
+    justify-content: space-evenly;
     gap: 1rem;
 }
 
@@ -94,6 +95,14 @@ main {
     padding: 0.5rem;
     color: var(--white);
     border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-btn:hover {
+    background-color: var(--very-dark-blue);
+    border-color: var(--very-dark-blue);
+    cursor: pointer;
 }
 
 .cart-btn::before {
@@ -103,18 +112,19 @@ main {
 
 .bold {
     font-family: 'Fraunces';
-    font-weight: 700;
+    font-weight: 1000;
 }
 
 .price {
     color: var(--dark-cyan);
+    font-size: 25px;
 }
 
 .original-price {
     color: var(--dark-grayish-blue);
     font-size: 16px;
     font-weight: 700;
-    text-decoration: line-through;
+    /* text-decoration: line-through; */
     align-self: center;
     margin-left: 1.5rem;
 }
